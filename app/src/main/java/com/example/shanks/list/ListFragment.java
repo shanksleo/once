@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,7 @@ public class ListFragment extends Fragment {
         List<Diary> list = DataSupport.findAll(Diary.class);
         mListAdapter = new ListAdapter(MyApplication.getContext(), list);
         mListFragment.setAdapter(mListAdapter);
-
+        Log.d("tag","listonCreate");
 
         return view;
 
