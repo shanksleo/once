@@ -2,8 +2,6 @@ package com.example.shanks.once;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.LayoutInflater;
@@ -15,8 +13,6 @@ import android.widget.Toast;
 
 import com.example.shanks.MainActivity;
 import com.example.shanks.database.Diary;
-import com.example.shanks.list.ListAdapter;
-import com.example.shanks.list.ListFragment;
 import com.example.shanks.util.LinkFragment;
 import com.example.shanks.util.MyApplication;
 
@@ -52,7 +48,7 @@ public class OnceFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.once_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_once, container, false);
         ButterKnife.inject(this, view);
         mActivity = (MainActivity)getActivity();
         mSure.setOnClickListener(this);

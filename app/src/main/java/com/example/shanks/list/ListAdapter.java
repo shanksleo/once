@@ -22,7 +22,7 @@ public class ListAdapter extends SimpleBaseAdapter<Diary> {
 
     @Override
     public int getItemResource() {
-        return R.layout.list_single;
+        return R.layout.list_item_single;
     }
 
     @Override

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--设置类别-->
+    <PreferenceCategory
+        android:key="notify"
+        android:summary="是否每天提醒"
+        android:title="提醒"
+        >
+        <CheckBoxPreference
+            android:summary="打开则每天提醒"
+            android:title="确认"
+            android:key="notify_every_day"
+            />
+        </PreferenceCategory>
+    <PreferenceCategory
+        android:title="个人信息"
+        android:summary="填写个人信息"
+        >
+        <EditTextPreference
+            android:key="name_person"
+            android:title="姓名"
+            android:summary="姓名"
+            />
+        <ListPreference
+            android:key="sex"
+            android:title="性别"
+            android:summary="你的性别"
+            android:entries="@array/sex"
+            android:entryValues="@array/sex"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+
+

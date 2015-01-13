@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">once</string>
-    
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+        <item>中</item>
+    </string-array>
 </resources>

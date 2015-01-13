@@ -5,13 +5,17 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.shanks.list.ListFragment;
 import com.example.shanks.once.OnceFragment;
 import com.example.shanks.once.R;
+import com.example.shanks.setting.SettingActivity;
 import com.example.shanks.util.LinkFragment;
 
 import java.util.ArrayList;
@@ -21,6 +25,24 @@ import java.util.ArrayList;
  */
 public class MainActivity extends Activity implements LinkFragment{
     private TabsAdapter mTabsAdapter;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.activity_setting:
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+        return true;
+    }
 
     @Override
     public void onListChanged() {
